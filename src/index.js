@@ -9,16 +9,15 @@ import App from './components/App';
 // CREATE COUNTER
 const store = createStore(reducer);
 
-const update = () => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
+// Provider отслеживает изменения (dispatch) state в store -> provider дает сигнал connect() -> запускается connect() и запускает mapStateToProps -> производит изменение state
+const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
         <React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </React.StrictMode>
-    );
-}
+);
 
 
 
