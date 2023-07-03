@@ -9,13 +9,13 @@ import * as actions from './actions.js'; // import all values in object
 
 // Create variable store with reducer
 const store = createStore(reducer); // store creaate reducer -> create state = 0
-
+// console.log(state.getState());
 // Add function for change value of h1
 const update = () => {
     document.getElementById('counter').textContent = store.getState().value; // we need take value from state.value 
 }
 
-// function bindActionCreator return function, this function is pattern for Redux. Same function from Redux 'bindActionCreators'
+// // function bindActionCreator return function, this function is pattern for Redux. Same function from Redux 'bindActionCreators'
 // const bindActionCreator = (creator, dispatch) => (...args) => {
 //     dispatch(creator(...args))
 // }
