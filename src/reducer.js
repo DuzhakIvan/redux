@@ -1,4 +1,4 @@
-const initialState = {value: 0};
+const initialState = {counter: 0};
 
 // Create function reducer by logical block scheme of Redux
 // function reducer must be CLEAR, and change only from state and action, when we get same values we must have same results, DONT  make service request, random numbers, DOM-tree parametrs or something else.
@@ -8,17 +8,17 @@ const reducer = (state = initialState, action) => { // reducer get state (what s
         case 'INC':
             return {
                 ...state,
-                value: state.value + 1
+                counter: state.counter + 1
             }; // Make new oject (old properties and new property)
         case 'DEC':
             return  {
                 ...state,
-                value: state.value - 1
+                counter: state.counter - 1
             };
         case 'RND':
             return  {
                 ...state,
-                value: state.value * action.payload
+                counter: state.counter * action.payload
             };// All variable property we must decluration outside the reducer, for complete principle ClEAR for reducer 
         default:
             return state;
